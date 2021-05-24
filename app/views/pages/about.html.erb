@@ -1,0 +1,12 @@
+<p>Learn more about our team!</p>
+
+<form action="/about" method="GET">
+  <input type="text" name="member_name" value="<%= params[:member_name] %>"> <!-- the name is the key of the params variable in the controller -->
+  <input type="submit" value="Filter">
+</form>
+
+<ul>
+  <% @members.each do |member| %>
+    <li><%= member %></li>
+  <% end %>
+</ul>
